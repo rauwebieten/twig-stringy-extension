@@ -13,6 +13,8 @@ composer require rauwebieten/twig-stringy-extension
 
 ## Available filters
 
+All Stringy methods are converted to underscored filters (to maintain the twig code style).
+
 stringy_append, stringy_at, stringy_between, stringy_camelize, stringy_chars, stringy_collapse_whitespace, 
 stringy_contains, stringy_contains_all, stringy_contains_any, stringy_count_substr, stringy_dasherize, 
 stringy_delimit, stringy_ends_with, stringy_ends_with_any, stringy_ensure_left, stringy_ensure_right, 
