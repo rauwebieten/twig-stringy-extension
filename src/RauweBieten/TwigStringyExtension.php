@@ -92,7 +92,7 @@ class TwigStringyExtension extends \Twig_Extension
         ];
 
         return array_map(function ($method) {
-            $filtername = 'stringy_' . StaticStringy::underscored($method);
+            $filtername = StaticStringy::underscored($method);
             return new \Twig_Filter($filtername, [StaticStringy::class, $method]);
         }, $methods);
     }
