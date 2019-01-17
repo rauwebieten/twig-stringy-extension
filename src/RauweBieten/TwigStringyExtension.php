@@ -88,7 +88,7 @@ class TwigStringyExtension extends \Twig_Extension
             'truncate',
             'underscored',
             'upperCamelize',
-            'upperCaseFirst'
+            'upperCaseFirst',
         ];
 
         return array_map(function ($method) {
