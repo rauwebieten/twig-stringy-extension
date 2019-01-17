@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/rauwebieten/twig-stringy-extension.svg?branch=master)](https://travis-ci.org/rauwebieten/twig-stringy-extension)
 [![codecov](https://codecov.io/gh/rauwebieten/twig-stringy-extension/branch/master/graph/badge.svg)](https://codecov.io/gh/rauwebieten/twig-stringy-extension)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1b42dc9cdf05782957ea/maintainability)](https://codeclimate.com/github/rauwebieten/twig-stringy-extension/maintainability)
 
 A [Twig extension](https://github.com/twigphp/Twig)
 for the [Stringy library](https://github.com/danielstjules/Stringy)
