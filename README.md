@@ -39,9 +39,11 @@ See the [Stringy documentation](https://github.com/danielstjules/Stringy) for de
 
 ## Example usage
 
+Example usage in a twig template
+
 ```twig
-{{ 'àê'|appends('ïò') }} returns àêïò
-{{ 'àêïò'|at(1) }} returns ê
-{{ 'àêïò'|between('à','ò') }} returns êï
-{{ 'Thîs ïs à senténce'|camelize }} return thîsÏsÀSenténce
+{{ 'àê'|appends('ïò') }} => àêïò
+{{ 'àêïò'|at(1) }} => ê
+{{ 'àêïò'|between('à','ò') }} => êï
+{{ 'Thîs ïs à senténce'|camelize }} => thîsÏsÀSenténce
 ```
