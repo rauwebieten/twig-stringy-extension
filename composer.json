@@ -19,5 +19,6 @@
         "psr-4": {
             "RauweBieten\\": "src/RauweBieten"
         }
-    }
+    },
+    "license": "MIT"
 }
