@@ -4,4 +4,4 @@ php:
 before_script:
   - composer self-update
   - composer install
-script: ./vendor/bin/phpunit --bootstrap ./vendor/autoload.php tests
+script: ./vendor/bin/phpunit

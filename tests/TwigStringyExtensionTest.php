@@ -1,12 +1,17 @@
 <?php
 declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
-
-class TwigStringyExtensionTest extends TestCase
+class TwigStringyExtensionTest extends Twig_Test_IntegrationTestCase
 {
-    public function testImplementsTwigExtensionInterface() {
-        $extension = new \RauweBieten\TwigStringyExtension();
-        $this->assertInstanceOf(Twig_ExtensionInterface::class, $extension);
+    public function getExtensions()
+    {
+        return [
+            new \RauweBieten\TwigStringyExtension()
+        ];
+    }
+
+    public function getFixturesDir()
+    {
+        return __DIR__ . '/fixtures';
     }
 }

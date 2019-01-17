@@ -1,0 +1,8 @@
+--TEST--
+"append" filter
+--TEMPLATE--
+{{ 'àê'|append('ïò') }}
+--DATA--
+return []
+--EXPECT--
+àêïò

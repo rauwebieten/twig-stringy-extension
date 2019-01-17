@@ -1,0 +1,8 @@
+--TEST--
+"at" filter
+--TEMPLATE--
+{{ 'àêïò'|at(1) }}
+--DATA--
+return []
+--EXPECT--
+ê

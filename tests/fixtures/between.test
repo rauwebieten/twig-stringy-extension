@@ -1,0 +1,8 @@
+--TEST--
+"between" filter
+--TEMPLATE--
+{{ 'àêïò'|between('à','ò') }}
+--DATA--
+return []
+--EXPECT--
+êï

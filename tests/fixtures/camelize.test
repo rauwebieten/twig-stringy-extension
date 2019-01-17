@@ -1,0 +1,8 @@
+--TEST--
+"camelize" filter
+--TEMPLATE--
+{{ 'Thîs ïs à senténce'|camelize }}
+--DATA--
+return []
+--EXPECT--
+thîsÏsÀSenténce
