@@ -1,5 +1,7 @@
 # Twig Stringy Extension
 
+[![Build Status](https://travis-ci.org/rauwebieten/twig-stringy-extension.svg?branch=master)](https://travis-ci.org/rauwebieten/twig-stringy-extension)
+
 A [Twig extension](https://github.com/twigphp/Twig)
 for the [Stringy library](https://github.com/danielstjules/Stringy)
 
