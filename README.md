@@ -42,13 +42,40 @@ upper_case_first
 
 See the [Stringy documentation](https://github.com/danielstjules/Stringy) for details.
 
-## Example usage
+## Available filters & example usage
 
 Example usage in a twig template
 
-```twig
-{{ 'àê'|appends('ïò') }} => àêïò
-{{ 'àêïò'|at(1) }} => ê
-{{ 'àêïò'|between('à','ò') }} => êï
-{{ 'Thîs ïs à senténce'|camelize }} => thîsÏsÀSenténce
+```twig,html
+<p>
+    {# append filter #}
+    {{ 'àê'|append('ïò') }} => àêïò
+</p>
+<p>
+    {# at filter #}
+    {{ 'àêïò'|at(1) }} => ê
+</p>
+<p>
+    {# between filter #}
+    {{ 'àêïò'|between('à','ò') }} => êï
+</p>
+<p>
+    {# camelize filter #}
+    {{ 'Thîs ïs à senténce'|camelize }} => thîsÏsÀSenténce
+</p>
+<p>
+    {# chars filter #}
+    {% for char in 'fòôbàř'|chars %}char "{{ char }}" {% endfor %}
+</p>
+<p>
+    {# collapse_whitespace filter #}
+    {{ '   Ο     συγγραφέας  '|collapse_whitespace }} => Ο συγγραφέας
+</p>
+<p>
+    {# contains filter #}
+    {% if 'Ο συγγραφέας είπε'|contains('συγγραφέας') %}
+        contains
+    {% else %}
+    {% endif %}
+</p>
 ```

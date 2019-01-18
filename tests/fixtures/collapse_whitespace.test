@@ -1,0 +1,8 @@
+--TEST--
+"collapse_whitespace" filter
+--TEMPLATE--
+{{ '   Ο     συγγραφέας  '|collapse_whitespace }}
+--DATA--
+return []
+--EXPECT--
+Ο συγγραφέας

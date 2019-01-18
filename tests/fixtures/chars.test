@@ -1,0 +1,8 @@
+--TEST--
+"chars" filter
+--TEMPLATE--
+{{ 'fòôbàř'|chars|length }}
+--DATA--
+return []
+--EXPECT--
+6

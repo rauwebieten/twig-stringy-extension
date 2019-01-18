@@ -1,0 +1,8 @@
+--TEST--
+"contains" filter
+--TEMPLATE--
+{{ 'Ο συγγραφέας είπε'|contains('συγγραφέας') ? 1:0 }}
+--DATA--
+return []
+--EXPECT--
+1
