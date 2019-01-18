@@ -1,7 +1,7 @@
 --TEST--
 "camelize" filter
 --TEMPLATE--
-{{ 'Thîs ïs à senténce'|camelize }}
+{{ 'Thîs ïs à senténce'|stringy_camelize }}
 --DATA--
 return []
 --EXPECT--

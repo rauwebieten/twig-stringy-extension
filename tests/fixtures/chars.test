@@ -1,7 +1,7 @@
 --TEST--
-"chars" filter
+"stringy_chars" filter
 --TEMPLATE--
-{{ 'fòôbàř'|chars|length }}
+{{ 'fòôbàř'|stringy_chars|length }}
 --DATA--
 return []
 --EXPECT--

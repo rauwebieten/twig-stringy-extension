@@ -1,7 +1,7 @@
 --TEST--
 "between" filter
 --TEMPLATE--
-{{ 'àêïò'|between('à','ò') }}
+{{ 'àêïò'|stringy_between('à','ò') }}
 --DATA--
 return []
 --EXPECT--

@@ -20,27 +20,8 @@ composer require rauwebieten/twig-stringy-extension
 
 ## Available filters
 
-All Stringy methods are converted to underscored filters (to maintain the twig code style).
-
-append, at, between, camelize, chars, collapse_whitespace, 
-contains, contains_all, contains_any, count_substr, dasherize, 
-delimit, ends_with, ends_with_any, ensure_left, ensure_right, 
-first, get_encoding, has_lower_case, has_upper_case, html_decode, 
-html_encode, humanize, index_of, index_of_last, insert, 
-is_alpha, is_alphanumeric, is_base64, is_blank, is_hexadecimal, 
-is_json, is_lower_case, is_serialized, is_upper_case, last, length, 
-lines, longest_common_prefix, longest_common_suffix, 
-longest_common_substring, lower_case_first, pad, pad_both, 
-pad_left, pad_right, prepend, regex_replace, remove_left, 
-remove_right, repeat, replace, reverse, safe_truncate, 
-shuffle, slugify, slice, split, starts_with, 
-starts_with_any, strip_whitespace, substr, surround, swap_case, 
-tidy, titleize, to_ascii, to_boolean, to_lower_case, 
-to_spaces, to_tabs, to_title_case, to_upper_case, trim, 
-trim_left, trim_right, truncate, underscored, upper_camelize, 
-upper_case_first
-
-See the [Stringy documentation](https://github.com/danielstjules/Stringy) for details.
+All Stringy methods are converted to underscored filters (to maintain the twig code style).  
+All filters are prefixed "stringy_" to avoid collissions with other filters.
 
 ## Available filters & example usage
 
@@ -48,34 +29,35 @@ Example usage in a twig template
 
 ```twig,html
 <p>
-    {# append filter #}
-    {{ 'àê'|append('ïò') }} => àêïò
+    {# stringy_append #}
+    {{ 'àê'|stringy_append('ïò') }} => àêïò
 </p>
 <p>
-    {# at filter #}
-    {{ 'àêïò'|at(1) }} => ê
+    {# stringy_at #}
+    {{ 'àêïò'|stringy_at(1) }} => ê
 </p>
 <p>
-    {# between filter #}
-    {{ 'àêïò'|between('à','ò') }} => êï
+    {# stringy_between #}
+    {{ 'àêïò'|stringy_between('à','ò') }} => êï
 </p>
 <p>
-    {# camelize filter #}
-    {{ 'Thîs ïs à senténce'|camelize }} => thîsÏsÀSenténce
+    {# stringy_camelize #}
+    {{ 'Thîs ïs à senténce'|stringy_camelize }} => thîsÏsÀSenténce
 </p>
 <p>
-    {# chars filter #}
-    {% for char in 'fòôbàř'|chars %}char "{{ char }}" {% endfor %}
+    {# stringy_chars #}
+    {% for char in 'fòôbàř'|stringy_chars %}char "{{ char }}" {% endfor %}
 </p>
 <p>
-    {# collapse_whitespace filter #}
-    {{ '   Ο     συγγραφέας  '|collapse_whitespace }} => Ο συγγραφέας
+    {# stringy_collapse_whitespace #}
+    {{ '   Ο     συγγραφέας  '|stringy_collapse_whitespace }} => Ο συγγραφέας
 </p>
 <p>
-    {# contains filter #}
-    {% if 'Ο συγγραφέας είπε'|contains('συγγραφέας') %}
-        contains
-    {% else %}
-    {% endif %}
+    {# stringy_contains #}
+    {% if 'Ο συγγραφέας είπε'|stringy_contains('συγγραφέας') %}contains συγγραφέας{% endif %}
 </p>
 ```
+
+## More info
+
+[Stringy documentation](https://github.com/danielstjules/Stringy)

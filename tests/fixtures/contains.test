@@ -1,7 +1,7 @@
 --TEST--
 "contains" filter
 --TEMPLATE--
-{{ 'Ο συγγραφέας είπε'|contains('συγγραφέας') ? 1:0 }}
+{{ 'Ο συγγραφέας είπε'|stringy_contains('συγγραφέας') ? 1:0 }}
 --DATA--
 return []
 --EXPECT--

@@ -1,7 +1,7 @@
 --TEST--
 "collapse_whitespace" filter
 --TEMPLATE--
-{{ '   Ο     συγγραφέας  '|collapse_whitespace }}
+{{ '   Ο     συγγραφέας  '|stringy_collapse_whitespace }}
 --DATA--
 return []
 --EXPECT--

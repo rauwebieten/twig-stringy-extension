@@ -1,7 +1,7 @@
 --TEST--
 "at" filter
 --TEMPLATE--
-{{ 'àêïò'|at(1) }}
+{{ 'àêïò'|stringy_at(1) }}
 --DATA--
 return []
 --EXPECT--

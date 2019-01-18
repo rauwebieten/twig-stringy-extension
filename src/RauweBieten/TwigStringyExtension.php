@@ -6,7 +6,7 @@ use Stringy\StaticStringy;
 
 class TwigStringyExtension extends \Twig_Extension
 {
-    public static $methods = [
+    private static $methods = [
         'append',
         'at',
         'between',
@@ -89,10 +89,12 @@ class TwigStringyExtension extends \Twig_Extension
         'upperCaseFirst',
     ];
 
+    private static $prefix = 'stringy_';
+
     public function getFilters()
     {
         return array_map(function ($method) {
-            $filtername = StaticStringy::underscored($method);
+            $filtername = StaticStringy::underscored(self::$prefix . $method);
             return new \Twig_Filter($filtername, [StaticStringy::class, $method]);
         }, self::$methods);
     }
