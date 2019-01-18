@@ -4,6 +4,8 @@
 [![codecov](https://codecov.io/gh/rauwebieten/twig-stringy-extension/branch/master/graph/badge.svg)](https://codecov.io/gh/rauwebieten/twig-stringy-extension)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1b42dc9cdf05782957ea/maintainability)](https://codeclimate.com/github/rauwebieten/twig-stringy-extension/maintainability)
 [![StyleCI](https://github.styleci.io/repos/165697147/shield?branch=master)](https://github.styleci.io/repos/165697147)
+[![Issues](https://img.shields.io/github/issues/rauwebieten/twig-stringy-extension.svg)](https://github.com/rauwebieten/twig-stringy-extension/issues)
+![](https://img.shields.io/github/license/rauwebieten/twig-stringy-extension.svg)
 
 A [Twig extension](https://github.com/twigphp/Twig)
 for the [Stringy library](https://github.com/danielstjules/Stringy)
