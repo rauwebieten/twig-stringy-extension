@@ -95,6 +95,7 @@ class TwigStringyExtension extends \Twig_Extension
     {
         return array_map(function ($method) {
             $filtername = StaticStringy::underscored(self::$prefix . $method);
+            print '- ' . $filtername . PHP_EOL;
             return new \Twig_Filter($filtername, [StaticStringy::class, $method]);
         }, self::$methods);
     }
