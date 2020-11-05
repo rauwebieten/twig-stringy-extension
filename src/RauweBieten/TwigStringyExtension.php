@@ -3,8 +3,10 @@
 namespace RauweBieten;
 
 use Stringy\StaticStringy;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
-class TwigStringyExtension extends \Twig_Extension
+class TwigStringyExtension extends AbstractExtension
 {
     private static $methods = [
         'append',
@@ -94,8 +96,8 @@ class TwigStringyExtension extends \Twig_Extension
     public function getFilters()
     {
         return array_map(function ($method) {
-            $filtername = StaticStringy::underscored(self::$prefix . $method);
-            return new \Twig_Filter($filtername, [StaticStringy::class, $method]);
+            $filterName = StaticStringy::underscored(self::$prefix . $method);
+            return new TwigFilter($filterName, [StaticStringy::class, $method]);
         }, self::$methods);
     }
 }
