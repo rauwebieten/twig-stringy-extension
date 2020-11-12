@@ -3,9 +3,30 @@
 namespace RauweBieten;
 
 use Stringy\StaticStringy;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
-class TwigStringyExtension extends \Twig_Extension
+class TwigStringyExtension extends AbstractExtension
 {
+    /**
+     * @var string
+     */
+    private static $prefix = 'stringy_';
+
+    /**
+     * TwigStringyExtension constructor.
+     * @param string|null $prefix
+     */
+    public function __construct(?string $prefix = null)
+    {
+        if ($prefix !== null) {
+            self::$prefix = $prefix;
+        }
+    }
+
+    /**
+     * @var string[]
+     */
     private static $methods = [
         'append',
         'at',
@@ -89,14 +110,14 @@ class TwigStringyExtension extends \Twig_Extension
         'upperCaseFirst',
     ];
 
-    private static $prefix = 'stringy_';
-
-    public function getFilters()
+    /**
+     * @return array|TwigFilter[]
+     */
+    public function getFilters(): array
     {
         return array_map(function ($method) {
-            $filtername = StaticStringy::underscored(self::$prefix . $method);
-            print '- ' . $filtername . PHP_EOL;
-            return new \Twig_Filter($filtername, [StaticStringy::class, $method]);
+            $filterName = StaticStringy::underscored(self::$prefix . $method);
+            return new TwigFilter($filterName, [StaticStringy::class, $method]);
         }, self::$methods);
     }
 }
