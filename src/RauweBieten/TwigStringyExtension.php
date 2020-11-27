@@ -8,6 +8,25 @@ use Twig\TwigFilter;
 
 class TwigStringyExtension extends AbstractExtension
 {
+    /**
+     * @var string
+     */
+    private static $prefix = 'stringy_';
+
+    /**
+     * TwigStringyExtension constructor.
+     * @param string|null $prefix
+     */
+    public function __construct(?string $prefix = null)
+    {
+        if ($prefix !== null) {
+            self::$prefix = $prefix;
+        }
+    }
+
+    /**
+     * @var string[]
+     */
     private static $methods = [
         'append',
         'at',
@@ -91,9 +110,10 @@ class TwigStringyExtension extends AbstractExtension
         'upperCaseFirst',
     ];
 
-    private static $prefix = 'stringy_';
-
-    public function getFilters()
+    /**
+     * @return array|TwigFilter[]
+     */
+    public function getFilters(): array
     {
         return array_map(function ($method) {
             $filterName = StaticStringy::underscored(self::$prefix . $method);
