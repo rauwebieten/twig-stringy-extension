@@ -115,7 +115,7 @@ class TwigStringyExtension extends AbstractExtension
      */
     public function getFilters(): array
     {
-        return array_map(function ($method) {
+        return array_map(static function ($method) {
             $filterName = StaticStringy::underscored(self::$prefix . $method);
             return new TwigFilter($filterName, [StaticStringy::class, $method]);
         }, self::$methods);
