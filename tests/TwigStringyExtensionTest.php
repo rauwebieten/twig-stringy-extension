@@ -9,12 +9,12 @@ class TwigStringyExtensionTest extends \Twig\Test\IntegrationTestCase
     public function getExtensions(): array
     {
         return [
-            new TwigStringyExtension()
+            new TwigStringyExtension(),
         ];
     }
 
     public function getFixturesDir(): string
     {
-        return __DIR__ . '/fixtures';
+        return __DIR__.'/fixtures';
     }
 }
