@@ -1,17 +1,20 @@
 <?php
+
 declare(strict_types=1);
 
-class TwigStringyExtensionTest extends Twig_Test_IntegrationTestCase
+use RauweBieten\TwigStringyExtension;
+
+class TwigStringyExtensionTest extends \Twig\Test\IntegrationTestCase
 {
-    public function getExtensions()
+    public function getExtensions(): array
     {
         return [
-            new \RauweBieten\TwigStringyExtension()
+            new TwigStringyExtension(),
         ];
     }
 
-    public function getFixturesDir()
+    public function getFixturesDir(): string
     {
-        return __DIR__ . '/fixtures';
+        return __DIR__.'/fixtures';
     }
 }
